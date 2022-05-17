@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-# simple_shell
+# Simple Shell
 
 A simple shell.
 
 =======
-SIMPLE_SHELL ny Vera and Lawkay 
+SIMPLE_SHELL by Vera and Lawkay 
