@@ -1,29 +1,28 @@
 #include "shell.h"
-#include <string.h>
 
 /**
-* excute - executes the parent and child process
-* @tokens : tokenized array of commands
-* @cmdPath : command with the complete path
-* Return - nothing
-*/
-void excute(char **tokens, char *cmdPath)
+ * main - entry point
+ * @ac: arg count
+ * @av: arg vector
+ *
+ * Return: 0 on success, 1 on error
+ */
+int main(int ac, char **av)
 {
-	pid_t pid;
-	int status;
+	info_t info[] = { INFO_INIT };
 
-	pid = fork();
-	if (pid == -1)
+	if (ac == 2)
 	{
-		perror("Forking Error\n");
-	}
-	if (pid == 0)
-	{
-		if (execve(cmdPath, tokens, environ) == -1)
+		info->readfd = open_file(info, av[1], 0);
+		if (info->readfd == -1)
 		{
-			perror("No such file or directory\n");
+			free_info(info, 1);
+			exit(info->err_num);
 		}
 	}
-	else
-		waitpid(-1, &status, 0);
+	populate_env_list(info);
+	read_history(info);
+	read_startup_file(info);
+	hsh(info, av);
+	return (EXIT_SUCCESS);
 }
