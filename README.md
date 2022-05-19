@@ -1,6 +1,6 @@
 # Simple Shell
 
-# Information
+## Information
 This project was created to help the students a write simple UNIX command interpreter.
 
 ## List of Functions Allowed
