@@ -1,7 +1,7 @@
 # Simple Shell
 
 ## Information
-This project was created to help the students a write simple UNIX command interpreter.
+This project was created to help the students lear how to write simple UNIX command interpreter.
 
 ## List of Functions Allowed
 * List of allowed functions and system calls
