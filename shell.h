@@ -310,3 +310,5 @@ char *create_date(void);
 char *create_time(int);
 char *its_weekday(int);
 char *its_month(int);
+
+#endif
