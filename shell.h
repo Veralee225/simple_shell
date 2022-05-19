@@ -304,3 +304,9 @@ void print_error_noarg(info_t *info, char *estr);
 /* startup.c */
 int open_file(info_t *info, char *name, int silent);
 void read_startup_file(info_t *info);
+
+/* time.c */
+char *create_date(void);
+char *create_time(int);
+char *its_weekday(int);
+char *its_month(int);
