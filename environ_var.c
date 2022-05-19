@@ -1,4 +1,5 @@
 #include "shell.h"
+#include "_getline.h"
 
 /**
  * get_environ - returns the string array copy of our environ
