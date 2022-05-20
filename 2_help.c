@@ -1,5 +1,5 @@
 #include "shell.h"
-
+#include "_getline.h"
 /**
  * help_alias - prints help info for 'alias' built-in
  * @info: struct with flags
