@@ -1,5 +1,4 @@
 #include "shell.h"
-#include "_getline.h"
 
 /**
  * _myexit - exits the shell

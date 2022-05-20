@@ -1,5 +1,4 @@
 #include "shell.h"
-#include "_getline.h"
 
 /**
  * _myhistory - displays the history list, one command by line, preceded
