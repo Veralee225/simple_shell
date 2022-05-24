@@ -1,12 +1,12 @@
 #include "_getline.h"
 
 /**
- * __getline - gets a line of chars from a file descriptor
+ * _getline - gets a line of chars from a file descriptor
  * @fd: the file descriptor to read
  *
  * Return: pointer to the line
  */
-char *__getline(const int fd)
+char *_getline(const int fd)
 {
 	static FdBuf head;
 	FdBuf *fb = NULL, *temp;
@@ -39,12 +39,12 @@ char *__getline(const int fd)
 }
 
 /**
- * __read_buf - reads into the buffer
+ * _read_buf - reads into the buffer
  * @fb: the fd buf struct
  *
  * Return: 0 on success else -1 on error.
  */
-char *__read_buf(FdBuf *fb)
+char *_read_buf(FdBuf *fb)
 {
 	char buf[READ_SIZE + 1], *p, *line;
 	ssize_t r = 0;
@@ -126,7 +126,7 @@ FdBuf *get_fdbuf(FdBuf *head, const int fd)
 }
 
 /**
- **__strchr - locates a character in a string
+ **_strchr - locates a character in a string
  *@s: the string to be parsed
  *@c: the character to look for
  *@size: number of bytes to search
